@@ -1,0 +1,46 @@
+{% include 'navbar.html' %}
+<h1 class="text-center my-2">Update Book</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="md-3">
+                            <label for="sno">SNO</label>
+                            <input type="number" name="lib_sno" id="roll" class="form-control"
+                                placeholder="Enter the Serial Number" required value="{{lib.sno}}">
+                        </div>
+                        <div class="md-3">
+                            <label for="name">Book name</label>
+                            <input name="lib_name" type="text" id="name" class="form-control"
+                                placeholder="Enter the Book Name" required value="{{lib.name}}">
+                        </div>
+                        <div class="md-3">
+                            <label for="author">Author</label>
+                            <input name="lib_author" type="Author" id="author" class="form-control"
+                                placeholder="Enter Author name" required value="{{lib.author}}">
+                        </div>
+                        <div class="md-3">
+                            <label for="title">Book title</label>
+                            <textarea rows="4" cols="60" name="lib_title" placeholder="Enter Book Title" required
+                                class="form-control">{{lib.title}}</textarea>
+                        </div>
+                        <div class="md-3">
+                            <label for="Book-number">Book-number</label>
+                            <input name="lib_number" type="Book-number" id="author" class="form-control"
+                                placeholder="Enter Author name" required value="{{lib.number}}">
+                        </div>
+                        <div class="container text-center my-3 ">
+                            <button class="btn btn-warning">Update Book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
